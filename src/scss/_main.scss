@@ -1,0 +1,70 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+
+    .personal-container {
+        display: flex;
+        width: 30%;
+        height: 100%;
+        background-color: var(--theme-color);
+        justify-content: center;
+        padding: 16px;
+
+        .name-container {
+            display: none;
+        }
+
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+
+            .avatar-bounder {
+                background: var(--color-white);
+                border-radius: 50%;
+                width: 165px;
+                height: 165px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .work-container {
+        display: flex;
+        width: 70%;
+        height: 100%;
+        background-color: pink;
+        justify-content: center;
+        padding: 16px;
+
+        .name-container {
+            display: flex;
+            flex-direction: column;
+            height: 130px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            background: var(--theme-color);
+
+            .name {
+                font-size: var(--size-8);
+                font-weight: bold;
+            }
+
+            .job {
+                font-size: var(--size-2);
+                text-transform: uppercase;
+                padding: 8px 0;
+            }
+        }
+    }
+}

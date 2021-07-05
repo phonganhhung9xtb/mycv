@@ -1,0 +1,33 @@
+$font-family: 'Helvetica Neue';
+
+:root,
+:root .medium{
+    --size-1: 12px;
+    --size-2: 16px;
+    --size-3: 18px;
+    --size-4: 20px;
+    --size-5: 24px;
+    --size-6: 28px;
+    --size-7: 32px;
+    --size-8: 40px;
+}
+:root .small {
+    --size-1: 10px;
+    --size-2: 14px;
+    --size-3: 16px;
+    --size-4: 18px;
+    --size-5: 20px;
+    --size-6: 24px;
+    --size-7: 28px;
+    --size-8: 36px;
+}
+:root .large{
+    --size-1: 14px;
+    --size-2: 18px;
+    --size-3: 22px;
+    --size-4: 24px;
+    --size-5: 26px;
+    --size-6: 32px;
+    --size-7: 36px;
+    --size-8: 44px;
+}

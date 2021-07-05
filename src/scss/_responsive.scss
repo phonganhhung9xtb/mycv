@@ -1,0 +1,61 @@
+
+@media screen and (max-width: 767px) {
+    .home-container {
+        flex-direction: column;
+    
+        .personal-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: unset;
+
+            .name-container {
+                display: flex;
+                flex-direction: column;
+                height: 130px;
+                width: 100%;
+                align-items: center;
+                background: var(--theme-color);
+
+                .name {
+                    font-size: var(--size-7);
+                    font-weight: bold;
+                }
+
+                .job {
+                    font-size: var(--size-1);
+                    text-transform: uppercase;
+                    padding: 8px 0;
+                }
+            }
+
+            .avatar-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -60px;
+
+                .avatar-bounder {
+                    background: var(--color-white);
+                    border-radius: 50%;
+                    width: 126px;
+                    height: 126px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    
+        .work-container {
+            width: 100%;
+            height: unset;
+        }
+    }
+}

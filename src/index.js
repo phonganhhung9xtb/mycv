@@ -2,16 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import './init';
+import i18nInit from './i18n';
 import reportWebVitals from './reportWebVitals';
+import './scss/style.scss';
+import dataStorage from './dataStorage';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const initialWebsite = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const getConfig = () => {
+  i18nInit(() => fetch('/config.json')
+    .then(res => res.json())
+    .then(data => {
+      dataStorage.config = data
+      initialWebsite()
+    })
+    .catch(err => {
+      console.log('YOLO ERROR')
+    })
+  )
+}
+
+getConfig()
+
 reportWebVitals();
