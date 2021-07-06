@@ -56,6 +56,10 @@
         .work-container {
             width: 100%;
             height: unset;
+
+            .name-container {
+                display: none;
+            }
         }
     }
 }

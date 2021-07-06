@@ -1,5 +1,5 @@
 import React from 'react'
-import Name from '../PersonalInformation/name'
+import Name from '../PersonalInformation/Name'
 
 const WorkInformation = () => {
     return (

@@ -5,3 +5,7 @@ body {
     color: var(--secondary-dark);
     font-family: $font-family;
 }
+
+a {
+    word-break: break-word;
+}

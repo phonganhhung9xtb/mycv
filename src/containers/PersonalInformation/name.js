@@ -1,6 +1,6 @@
 import React from 'react'
 import Lang from '../../components/Lang'
-import dataStorage from '../..//dataStorage'
+import dataStorage from '../../dataStorage'
 
 const Name = () => {
     return (
