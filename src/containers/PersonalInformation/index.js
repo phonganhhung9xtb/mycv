@@ -4,6 +4,8 @@ import Avatar from './Avatar'
 import AboutMe from './AboutMe'
 import ContactMe from './ContactMe'
 import FollowMe from './FollowMe'
+import ProSkill from './ProSkill'
+import PersonalInfo from './PersonalInfo'
 
 const PersonalInformation = () => {
     return (
@@ -11,8 +13,9 @@ const PersonalInformation = () => {
             <Name />
             <Avatar />
             <AboutMe />
+            <PersonalInfo />
             <ContactMe />
-            <FollowMe />
+            <ProSkill />
         </div>
     )
 }

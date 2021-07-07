@@ -5,25 +5,26 @@ import Info from '../../components/Info'
 import Lang from '../../components/Lang'
 import { path } from '../../components/Icons'
 
-const ContactMe = () => {
+const PersonalInfo = () => {
     return (
         <div className='personal-info-container'>
-            <Title title='lang_contact_me' icon={path.mdiPhone} />
+            <Title title='lang_personal_info' icon={path.mdiAccount} />
             <Info
-                path={path.mdiCellphoneBasic}
-                content={dataStorage.config.phone}
+                path={path.mdiCakeVariant}
+                content={dataStorage.config.dob}
             />
             <Info
-                path={path.mdiEmail}
-                content={dataStorage.config.email}
-            />
-            <Info
-                path={path.mdiHome}
+                path={path.mdiMapMarker}
                 translate
-                content={dataStorage.config.address}
+                content={dataStorage.config.country}
+            />
+            <Info
+                path={path.mdiHeart}
+                translate
+                content={dataStorage.config.relationship}
             />
         </div>
     )
 }
 
-export default ContactMe
+export default PersonalInfo

@@ -11,5 +11,30 @@
     "address": "lang_address",
     "facebook": "https://www.facebook.com/WindyDang26/",
     "youtube": "https://www.facebook.com/WindyDang26/",
-    "tiktok": "https://www.facebook.com/WindyDang26/"
+    "tiktok": "https://www.facebook.com/WindyDang26/",
+    "skills": [
+        {
+            "label": "HTML",
+            "value": 80
+        },
+        {
+            "label": "CSS",
+            "value": 85
+        },
+        {
+            "label": "Javascript",
+            "value": 90
+        },
+        {
+            "label": "ReactJS",
+            "value": 80
+        },
+        {
+            "label": "React Native",
+            "value": 85
+        }
+    ],
+    "dob": "02/06/1993",
+    "country": "lang_thai_binh",
+    "relationship": "lang_married"
 }

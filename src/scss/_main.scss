@@ -1,3 +1,16 @@
+@mixin personal-info-text {
+    font-size: var(--size-3);
+    color: var(--secondary-dark);
+    font-weight: 400;
+}
+
+@mixin personal-sub-info {
+    font-size: var(--size-3);
+    color: var(--secondary-dark);
+    opacity: 0.7;
+    font-weight: 400;
+}
+
 .home-container {
     display: flex;
     flex-direction: row;
@@ -10,7 +23,6 @@
         height: 100%;
         background-color: var(--theme-color);
         align-items: center;
-        padding: 16px;
         flex-direction: column;
 
         .name-container {
@@ -44,9 +56,14 @@
         display: flex;
         width: 70%;
         height: 100%;
-        background-color: pink;
+        background-color: var(--color-white);
         justify-content: center;
         padding: 16px;
+
+        .pro-skills,
+        .about-me {
+            display: none;
+        }
 
         .name-container {
             display: flex;
@@ -106,23 +123,63 @@
 
     .personal-info-container {
         display: flex;
+        box-sizing: border-box;
         width: 100%;
         flex-direction: column;
-        padding-bottom: 16px;
+        padding: 0 8px 8px 16px;
 
+        .info-content-long,
         .info-content {
-            font-size: var(--size-3);
-            color: var(--secondary-dark);
-            font-weight: 400;
+            @include personal-info-text;
             flex: 1;
-
-            &a {
-                word-break: break-word;
-            }
         }
 
-        >.info-content {
-            padding: 0 8px 0 32px;
+        .info-subcontent {
+            @include personal-sub-info;
+        }
+
+        .info-content-array {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        >.info-content,
+        >.info-content-long {
+            padding: 0 0 0 32px;
+        }
+    }
+
+    .skills-container {
+        padding-left: 32px;
+    }
+
+    .skill-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .skill-label {
+            width: 40%;
+            @include personal-info-text;
+        }
+    }
+
+    .list-bullet {
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--secondary-dark);
+    }
+
+    .progress-container {
+        display: flex;
+        flex: 1;
+        height: 8px;
+        background-color: var(--color-white);
+
+        > div {
+            background-color: var(--ascend-default);
         }
     }
 }

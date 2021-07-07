@@ -2,7 +2,7 @@ import React from 'react'
 import SvgIcon, { path } from './Icons'
 import Lang from './Lang'
 
-const Info = ({ path, content, translate, link }) => {
+const Info = ({ path, subContent, content, translate, link }) => {
 
     if (link) {
         return (
@@ -16,7 +16,10 @@ const Info = ({ path, content, translate, link }) => {
         <div className='info-container'>
             <SvgIcon path={path} />
             {
-                Array.isArray(content) ? <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                subContent ? <div className='info-subcontent'>{translate ? <Lang>{subContent}</Lang> : subContent}&nbsp;</div> : null
+            }
+            {
+                Array.isArray(content) ? <div className='info-content-array'>
                     {
                         content.map((e, i) => <div className='info-content' key={`info_item_${i}`}>{e}</div>)
                     }

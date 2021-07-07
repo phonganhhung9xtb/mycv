@@ -8,12 +8,19 @@
             flex-direction: column;
             width: 100%;
             height: unset;
+            background-color: var(--color-white);
+
+            .pro-skills,
+            .about-me {
+                display: none;
+            }
 
             .name-container {
                 display: flex;
                 flex-direction: column;
                 height: 130px;
                 width: 100%;
+                padding-top: 16px;
                 align-items: center;
                 background: var(--theme-color);
 
@@ -33,7 +40,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: -60px;
+                margin-top: -80px;
 
                 .avatar-bounder {
                     background: var(--color-white);
@@ -56,10 +63,52 @@
         .work-container {
             width: 100%;
             height: unset;
+            flex-direction: column;
+            padding: 0;
+
+            .pro-skills,
+            .about-me {
+                display: flex;
+            }
 
             .name-container {
                 display: none;
             }
+        }
+
+        .personal-info-container {
+            padding: 0 16px 0 16px;
+
+            .title-container {
+                display: none;
+            }
+
+            .info-content-long {
+                // text-align: center;
+                padding: 0;
+            }
+
+            .info-content {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .info-content-array {
+                flex-direction: row;
+            }
+
+            >.info-content {
+                padding: 0;
+            }
+        }
+
+        .info-container {
+            padding-left: 0;
+        }
+
+        .skills-container {
+            padding-left: 0;
         }
     }
 }
