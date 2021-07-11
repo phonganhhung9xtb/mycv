@@ -10,5 +10,11 @@
     "lang_personal_info": "Personal Information",
     "lang_thai_binh": "Thai Binh",
     "lang_married": "Married",
-    "lang_from": "From"
+    "lang_from": "From",
+    "lang_education": "Education",
+    "lang_mta": "Military Technical Academy",
+    "lang_information_system": "Information System",
+    "lang_major": "Major",
+    "lang_gpa": "GPA",
+    "lang_job_experiences": "Job Experiences"
 }

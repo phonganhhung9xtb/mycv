@@ -11,6 +11,24 @@
     font-weight: 400;
 }
 
+@mixin work-sub-info {
+    font-size: var(--size-2);
+    color: var(--secondary-dark);
+    font-weight: 700;
+}
+
+@mixin work-main-info {
+    font-size: var(--size-3);
+    color: var(--ascend-default);
+    font-weight: 700;
+}
+
+@mixin work-main-info {
+    font-size: var(--size-3);
+    color: var(--ascend-default);
+    font-weight: 700;
+}
+
 .home-container {
     display: flex;
     flex-direction: row;
@@ -58,7 +76,13 @@
         height: 100%;
         background-color: var(--color-white);
         justify-content: center;
+        flex-direction: column;
         padding: 16px;
+
+        .personal-info-container {
+            margin: 16px 16px 0 0;
+            padding: 0;
+        }
 
         .pro-skills,
         .about-me {
@@ -92,10 +116,25 @@
         flex-direction: row;
         align-items: center;
         padding: 8px 0;
-        width: 100%;
+        position: relative;
+        background-color: transparent;
+
+        .round-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-white);
+
+            &.round-background-icon {
+                background: var(--theme-color);
+            }
+        }
 
         svg {
-            margin-right: 8px;
             fill: var(--secondary-dark);
         }
         
@@ -170,6 +209,12 @@
         height: 4px;
         border-radius: 2px;
         background-color: var(--secondary-dark);
+
+        &.big-list-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+        }
     }
 
     .progress-container {
@@ -180,6 +225,62 @@
 
         > div {
             background-color: var(--ascend-default);
+        }
+    }
+
+    .goal-title-container {
+        height: 48px;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: flex-start;
+
+        >div:first-child {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-self: flex-start;
+            position: relative;
+            background: orange;
+        }
+
+        .triangle-right {
+            width: 0px;
+            height: 0px;
+            border-top: 24px solid transparent;
+            border-bottom: 24px solid transparent;
+            border-left: 32px solid orange;
+
+            &:first-child {
+                border-left: 32px solid white;
+            }
+        }
+    }
+
+    .divider {
+        height: 2px;
+        margin: 8px 0;
+        background: var(--secondary-default);
+    }
+
+    .school-container {
+        display: flex;
+        flex-direction: row;
+        padding: 4px 0;
+        align-items: center;
+
+        .school-name {
+            @include work-main-info;
+        }
+
+        .school-year {
+            @include work-sub-info;
+        }
+
+        .major-name {
+            @include personal-info-text;
         }
     }
 }
